@@ -1,0 +1,28 @@
+.modal__container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.8);
+}
+
+.modal__container>img{
+    height: 300px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.button{
+    width: 80px;
+    height: 30px;
+    outline: none;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+
+}

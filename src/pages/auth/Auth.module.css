@@ -1,0 +1,54 @@
+.auth__container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+}
+
+.auth__card{
+    width: 370px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0bf60;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+    z-index: 10;
+    animation: animate 2.5s ease-in-out;
+}
+
+.auth__signin{
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.auth__logo{
+    height: 20px;
+    object-fit: contain;
+}
+
+@keyframes animate{
+    0%   { transform: scale(1,1)    translateY(-100%); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-100px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    57%  { transform: scale(1,1)    translateY(-7px); }
+    64%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
