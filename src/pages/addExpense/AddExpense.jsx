@@ -82,7 +82,7 @@ const AddExpense = () => {
             </select>
             <button className={classes.expense__send} 
             onClick={handleAddExpense}
-            id="cancel" 
+            id="add-expense" 
             name="add-button">
                 <i className="fas fa-paper-plane"></i>
                 Add

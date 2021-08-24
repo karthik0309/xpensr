@@ -11,15 +11,16 @@ const Auth = () => {
     const dispatch = useDispatch()
     const userName = useSelector(selectUserName)
 
-    const handleUserSignIn=()=>{
-        auth.signInWithPopup(authProvider).then((res)=>{
+    const handleUserSignIn=async()=>{
+        try{
+            const res= await auth.signInWithPopup(authProvider)
             dispatch(setActiveUser({
                 userName : res.user.displayName,
                 userEmail : res.user.email
             }))
-        }).catch((err)=>{
+        }catch(err){
             alert(err)
-        })
+        }  
     }
     return (
         <>

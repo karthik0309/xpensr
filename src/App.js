@@ -9,7 +9,6 @@ const AddExpense = lazy(()=>import('./pages/addExpense/AddExpense'))
 const App = () => {
   return (
     <>
-      {/* <Auth/> */}
       <Header/>
       <Router>
         <Suspense fallback={<h1>Loading..</h1>}>

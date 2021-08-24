@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {useDispatch,useSelector } from 'react-redux'
 import { setUserLogOut } from '../../actions/authSlice'
 import { selectUserName } from '../../actions/authSlice'
@@ -7,6 +7,7 @@ import classes from './Header.module.css'
 
 const Header = () => {
 
+    const [name, setName] = useState('')
     const dispatch = useDispatch();
     const userName = useSelector(selectUserName)
 
@@ -17,7 +18,11 @@ const Header = () => {
             alert(err)
         })
     }
+    const onSubmit=()=>{
+        window.heap.identify(name)
+    }
     return (
+        <>
         <div className={classes.header__container}>
             <div className={classes.header__logo}>
                 <p className={classes.header__title}>Xpensr</p>
@@ -30,6 +35,9 @@ const Header = () => {
                 </button>
             </div>
         </div>
+        <input type="text" onChange={e=>setName(e.target.value)} value={name}/>
+        <button onClick={onSubmit}>signup</button>
+        </>
     )
 }
 
